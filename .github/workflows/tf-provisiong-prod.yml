@@ -28,7 +28,7 @@ jobs:
         terraform_wrapper: false
 
     - name: Changing .tfvars file
-      run: mv terraform.auto.tfvars terraform.auto.tfvars.staging && mv terraform.auto.tfvars.prod terraform.auto.tfvars
+      run: mv terraform.auto.tfvars.prod terraform.auto.tfvars
 
     - name: Terraform Init
       run: terraform init
@@ -38,3 +38,4 @@ jobs:
 
     - name: Terraform Apply
       run: terraform apply -auto-approve
+    
