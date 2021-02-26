@@ -21,5 +21,6 @@ module "storage" {
 module "cdn" {
   source  = "app.terraform.io/devopsperu-demo/cdn/azurerm"
   version = "1.0.0"
-  static_endpoint = module.storage.primaryWebEndpoint
+  static_endpoint = replace(replace(module.storage.primaryWebEndpoint,"https://",""),"/","")
+
 }
