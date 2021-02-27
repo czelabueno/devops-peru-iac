@@ -10,7 +10,7 @@ terraform {
 
 module "storage" {
     source  = "app.terraform.io/devopsperu-demo/storage/azurerm"
-    version = "1.0.2"
+    version = "1.0.3"
   # insert required variables here
     account_tier = "Standard"
     account_replication_type = "LRS"
